@@ -9,7 +9,7 @@ mx.init(44100, 16, 6)
 notes = ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B']
 keys = [eval(f'Qt.Key_{i}') for i in '1Q2WE4R5T6YU8I9OP']
 keys = [Qt.Key_Tab] + keys + [Qt.Key_Minus, Qt.Key_BracketLeft, Qt.Key_Equal, Qt.Key_BracketRight, Qt.Key_Backspace, Qt.Key_Backslash]
-keys = list(map(lambda x: x.as_integer_ratio()[0], keys))
+keys = list(map(lambda x: int(x), keys))
 keys[0] = 96
 keys_str = list('~1Q2WE4R5T6YU8I9OP-[=]\\')
 keys_str.insert(-1, 'BS')
